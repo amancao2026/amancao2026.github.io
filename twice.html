@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans&display=swap" rel="stylesheet">
+        <title>Jose Rizal</title>
+        <style>
+            body {
+                width: 1350px;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: white;
+            }
+            h3 {
+                font-family: 'Open Sans', sans-serif;
+                color: black;
+            }
+            p {
+                font-family: 'Inter', sans-serif;
+                color: black;
+            }
+            a {
+                color: black;
+                text-decoration: none;
+            }
+            a:hover {
+                color: rgb(187, 225, 179);
+                transition-duration: 0.5s;
+            }
+            .accordion {
+                background-color: white;
+                color: black;
+                cursor: pointer;
+                padding: 18px;
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 15px;
+                transition: 0.4s;
+            }
+            .active, .accordion:hover {
+                background-color: white;
+                color:rgb(187, 225, 179);
+            }
+            .panel {
+                padding: 0 18px;
+                background-color: white;
+                color: black;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.2s ease-out;
+            }
+            * {
+                box-sizing: border-box;
+            }
+            .header {
+               text-align: center;
+               padding: 5px;
+            }
+            .row {
+                display: -ms-flexbox; /* IE 10 */
+                display: flex;
+                -ms-flex-wrap: wrap; /* IE 10 */
+                flex-wrap: wrap;
+                padding: 0 4px;
+            }
+            .column {
+                -ms-flex: 50%; /* IE 10 */
+                flex: 50%;
+                padding: 0 4px;
+            }
+            .column img {
+                margin-top: 8px;
+                vertical-align: middle;
+            }
+            .btn {
+                border: none;
+                outline: none;
+                padding: 10px 16px;
+                background-color: white;
+                color: black;
+                cursor: pointer;
+                font-size: 18px;
+            }
+            .btn:hover {
+                background-color: white;
+                color:rgb(187, 225, 179);
+                transition-duration: 0.5s;
+            }
+            .btn.active {
+                background-color: rgba(0, 0, 0, 0.671);
+                color: rgba(114, 0, 0, 0.671);
+            }
+            * {
+                box-sizing: border-box
+            }
+            body {
+                font-family: "Lato", sans-serif;
+            }
+            .tab {
+                float: left;
+                border: none;
+                background-color: white;
+                width: 30%;
+                height: 300px;
+            }
+            .tab button {
+                display: block;
+                background-color: inherit;
+                color: black;
+                padding: 22px 16px;
+                width: 100%;
+                border: none;
+                outline: none;
+                text-align: left;
+                cursor: pointer;
+                transition: 0.3s;
+                font-size: 17px;
+            }
+            .tab button:hover {
+                background-color: white;
+                color:rgb(187, 225, 179);
+            }
+            .tab button.active {
+                background-color: white;
+                color:rgb(187, 225, 179);
+            }
+            .tabcontent {
+                float: left;
+                padding: 0px 12px;
+                border: none;
+                width: 70%;
+                border-left: none;
+                height: 300px;
+            }
+            #main {
+                height: 937px;
+            }
+            #article {
+                width: 66%;
+                height: 937px;
+                float: left;
+            }
+            #side {
+                width: 33%;
+                height: 937px;
+                float: left;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <div id="article">
+                <!-- Header -->
+                <div class="header">
+                    <button class="btn" onclick="one()">one</button>
+                    <button class="btn" onclick="two()">two</button>
+                    <button class="btn" onclick="four()">three</button>
+                </div>
+                <!-- Photo Grid -->
+                  <div class="row"> 
+                    <div class="column">
+                        <img src="https://i.imgur.com/2Jr1FhS.jpg" style="width:100%">
+                        <img src="https://i.imgur.com/s2btKBS.jpg" style="width:100%">
+                        <img src="https://i.imgur.com/yNuf7Ie.jpg" style="width:100%">
+                        <img src="https://i.imgur.com/Vpj4CNb.jpg" style="width:100%">
+                        <img src="https://i.imgur.com/sVuXUGQ.png" style="width:100%">
+                        <img src="https://i.imgur.com/njvZQER.png" style="width:100%">
+                    </div>
+                    <div class="column">
+                        <img src="https://i.imgur.com/uqI0gYm.jpg" style="width:100%">
+                        <img src="https://i.imgur.com/09MbRt6.jpg" style="width:100%">
+                        <img src="https://i.imgur.com/sVuXUGQ.jpg" style="width:100%">
+                        <img src="https://i.imgur.com/Ze4Z5ys.jpg" style="width:100%">
+                        <img src="https://i.imgur.com/ItgwWoe.jpg" style="width:100%">
+                        <img src="https://i.imgur.com/Bs1wqrS.jpg" style="width:100%">
+                    </div>  
+                    <div class="column">
+                        <img src="https://i.imgur.com/mrwRbON.jpg" style="width:100%">
+                        <img src="https://i.imgur.com/noedHeV.jpg" style="width:100%">
+                        <img src="https://i.imgur.com/GAV0RnV.jpg" style="width:100%">
+                        <img src="https://i.imgur.com/Q16oTtR.jpg" style="width:100%">
+                        <img src="https://i.imgur.com/21dNih0.jpg" style="width:100%">
+                    </div>
+                    <div class="column">
+                        <img src="https://i.imgur.com/OQytbyp.jpg" style="width:100%">
+                        <img src="https://64.media.tumblr.com/510ac28481290f3faf3e799b701a01b3/f7c9f2af8cc065aa-1a/s400x600/171308b911906119501cc3bd45446a23db94d6d5.gif" style="width:100%">
+                        <img src="https://i.imgur.com/XBnV1DF.jpg" style="width:100%">
+                        <img src="https://i.imgur.com/FQVXqZy.jpg" style="width:100%">
+                        <img src="https://64.media.tumblr.com/1fcf7a6c9c737b20e62f7c31482f78a8/35766c9ac56d41a6-78/s1280x1920/99b44222fcb6781707ea32c51140f21851e4bafc.jpg" style="width:100%">
+                        <img src="https://64.media.tumblr.com/027aecfdd72a83b5822abcb8e2cfb45e/f6901c9109c74bb7-54/s540x810/fd54a8016fc2345afda602c10ebdc1bc28c272f5.gif" style="width:100%">
+                    </div>
+                </div>
+            </div>
+            <div id="side">
+                <h3 style="text-align: right"><a href="home.html">트와이스.</a></h3>
+                <button class="accordion">about</button>
+                <div class="panel">
+                    <p>about twice</p>
+                </div>
+                <button class="accordion">title here</button>
+                <div class="panel">
+                    <p>write what you want here</p>
+                </div>
+                <button class="accordion">title here</button>
+                <div class="panel">
+                    <p>describe title here!</p>
+                </div>
+                <div class="tab">
+                    <button class="tablinks" onclick="openCity(event, 'London')">&nbsp;</button>
+                    <button class="tablinks" onclick="openCity(event, 'Paris')">singles</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">albums</button>
+                </div>
+                <div id="London" class="tabcontent">
+                    <p>&nbsp;</p>
+                </div>
+                <div id="Paris" class="tabcontent">
+                    <p>
+                        Like Ooh-Aah<br/>
+                        Cheer Up<br/>
+                        TT<br/>
+                        Knock Knock<br/>
+                        Signal<br/>
+                        Likey<br/>
+                        Heart Shaker<br/>
+                        What Is Love?<br/>
+                        Dance the Night Away<br/>
+                        Yes or Yes<br/>
+                        The Best Thing I Ever Did<br/>
+                        Fancy<br/>
+                        Feel Special<br/>
+                        More & More<br/>
+                        I Can't Stop Me<br/>
+                        Cry For Me<br/>
+                        Alcohol-Free<br/>
+                        Scientist<br/>
+                        Talk That Talk<br/>
+                        &nbsp;<br/>
+                        One More Time<br/>
+                        Candy Pop<br/>
+                        Wake Me Up<br/>
+                        I Want You Back<br/>
+                        BDZ<br/>
+                        Happy Happy<br/>
+                        Breakthrough<br/>
+                        Fake & True<br/>
+                        Fanfare<br/>
+                        Better<br/>
+                        Kura Kura<br/>
+                        Perfect World<br/>
+                        Doughnut<br/>
+                        Celebrate<br/>
+                    </p>
+                </div>
+                <div id="Tokyo" class="tabcontent">
+                    <p>
+                        1 Twicecoaster: Lane 1<br/>
+                        2 Twicecoaster: Lane 2<br/>
+                        3 Twicetagram<br/>
+                        4 Merry & Happy<br/>
+                        5 Summer Nights<br/>
+                        6 BDZ<br/>
+                        7 YES or YES<br/>
+                        8 The year of "YES"<br/>
+                        9 Feel Special<br/>
+                        10 &TWICE<br/>
+                        11 MORE & MORE<br/>
+                        12 Eyes Wide Open<br/>
+                        13 Perfect World<br/>
+                        14 Formula of Love: O+T=<3<br/>
+                        15 Celebrate<br/>
+                        16 BETWEEN1&2
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+          });
+        }
+        // Get the elements with class="column"
+        var elements = document.getElementsByClassName("column");
+        // Declare a loop variable
+        var i;
+        // Full-width images
+        function one() {
+            for (i = 0; i < elements.length; i++) {
+                elements[i].style.msFlex = "100%";  // IE10
+                elements[i].style.flex = "100%";
+            }
+        }
+        // Two images side by side
+        function two() {
+            for (i = 0; i < elements.length; i++) {
+                elements[i].style.msFlex = "50%";  // IE10
+                elements[i].style.flex = "50%";
+            }
+        }
+        // Four images side by side
+        function four() {
+            for (i = 0; i < elements.length; i++) {
+                elements[i].style.msFlex = "25%";  // IE10
+                elements[i].style.flex = "25%";
+            }
+        }
+        // Add active class to the current button (highlight it)
+        var header = document.getElementById("myHeader");
+        var btns = header.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+</html>
